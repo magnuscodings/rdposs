@@ -261,6 +261,7 @@ if(isset($_SESSION["acc_id"])){
                         </div>
                     </div>
                 </main>
+                <!-- DITO -->
                 <?php 
         $sql = "SELECT DATE_FORMAT(orders_date, '%M %e') AS orders_date, SUM(orders_subtotal) AS weeklybenta
         FROM orders
@@ -301,6 +302,7 @@ if(isset($_SESSION["acc_id"])){
             $monthlyOrderDate = json_encode($monthlyOrderDate);
                 }
         ?>
+                <!-- DITO -->
 
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
@@ -316,12 +318,14 @@ if(isset($_SESSION["acc_id"])){
                 </footer>
             </div>
         </div>
+        <!-- ETo -->
         <script>
             var weeklySales = <?php echo $weeklySales?>;
             var weeklyOrderDate = <?php echo $weeklyOrderDate?>;
             var monthlySales = <?php echo $monthlySales?>;
             var monthlyOrderDate = <?php echo $monthlyOrderDate?>;
         </script>
+        <!-- ETo -->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
